@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/Sergii79/goit-js-hw-08",
+  "homepage": "https://goitacademy.github.io/parcel-project-template",
   
   "scripts": {
     "start": "parcel src/*.html",
