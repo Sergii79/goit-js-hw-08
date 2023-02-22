@@ -2,7 +2,7 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://sergii79.github.io/goit-js-hw-08/",
+  "homepage": "https://Sergii79.github.io/goit-js-hw-08/",
   
   "scripts": {
     "start": "parcel src/*.html",
