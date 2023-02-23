@@ -3,10 +3,11 @@ import { galleryItems } from './gallery-items';
 // Change code below this line
 
 // Описаний в документації
-// import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from "simplelightbox";
 // Додатковий імпорт стилів
-// import "simplelightbox/dist/simple-lightbox.min.css";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
+// var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
 
 console.log(galleryItems);
 console.log("Hello!!!");
@@ -19,20 +20,16 @@ const galleryBox = document.querySelector(".gallery");
 const showGalleryItems = galleryItems
 .map(({ preview, original, description }) => {
     return `
-    <div class="gallery__item">
-    <a class="gallery__link" 
-    href="${original}">
-    <img class="gallery__image" 
-    src="${preview}" 
-    data-source="${original}"
-    alt="${description}">
-    </img>
-    </a>
-    </div>`
+   <a class="gallery__item" href="${original}">
+  <img class="gallery__image" src="${preview}" alt="${description}" />
+</a>`
 })
 .join("");
 
 galleryBox.insertAdjacentHTML("afterbegin", showGalleryItems);
 
-
-var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
+// Посилання на бібліотеку SimpleLightbox - JavaScript Options
+var lightbox = new SimpleLightbox('.gallery a', {    
+    captionsData: 'alt',
+    captionDelay: 250,
+});
